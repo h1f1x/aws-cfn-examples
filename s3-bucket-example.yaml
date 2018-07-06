@@ -1,0 +1,5 @@
+region: eu-west-1
+stacks:
+  s3-bucket-example:
+    template-url: templates/s3-bucket.yaml
+

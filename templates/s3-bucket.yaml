@@ -1,0 +1,34 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Example S3 Bucket in different flavours
+
+Resources:
+
+  S3Bucket:
+    Type: AWS::S3::Bucket
+
+  BucketPolicy:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket: !Ref S3Bucket
+      PolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          Sid: AllowAll
+          Effect: Allow
+          Principal: "*"
+          Action: s3:*
+          Resource:
+          - !Join [ '/', [ !GetAtt S3Bucket.Arn, '*' ] ]
+          - !Join [ '/', [ !GetAtt S3Bucket.Arn ] ]
+          Condition:
+            StringEquals:
+              aws:PrincipalOrgID:
+              - o-abcdefgh
+
+Outputs:
+  BucketName:
+    Description: Name of Bucket
+    Value: !Ref S3Bucket
+  BucketArn:
+    Description: S3 bucket arn
+    Value:  !GetAtt S3Bucket.Arn
