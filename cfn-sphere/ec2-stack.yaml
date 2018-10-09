@@ -1,0 +1,9 @@
+region: eu-west-1
+tags:
+  owner: fborchers
+stacks:
+  ec2-example:
+    template-url: ../templates/ec2-minimal.yaml
+    parameters:
+      SubnetId: '|ref|vpc-stack.publicASubnet'
+      SshKeyName: fborchers@BERN0118
