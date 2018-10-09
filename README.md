@@ -10,6 +10,11 @@ The challenge here is to keep up-todate with the latest AMI.
 
 Possible solutions:
 
-https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/walkthrough-custom-resources-lambda-lookup-amiids.html
+- [AWS blogpost: Lambda for Lookup AMI Ids](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/walkthrough-custom-resources-lambda-lookup-amiids.html)
+- [Using AWS SM Parameter Store for AMI Lookup](
+https://aws.amazon.com/blogs/compute/query-for-the-latest-amazon-linux-ami-ids-using-aws-systems-manager-parameter-store/)
 
-https://aws.amazon.com/blogs/compute/query-for-the-latest-amazon-linux-ami-ids-using-aws-systems-manager-parameter-store/
+## ECR
+
+ - [Cloudformation Docs: ECR](https://docs.aws.amazon.com/de_de/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-repository.html)
+ - [LifeCycle Policies (ECR)](https://docs.aws.amazon.com/AmazonECR/latest/userguide/lp_creation.html)
