@@ -18,3 +18,10 @@ https://aws.amazon.com/blogs/compute/query-for-the-latest-amazon-linux-ami-ids-u
 
  - [Cloudformation Docs: ECR](https://docs.aws.amazon.com/de_de/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-repository.html)
  - [LifeCycle Policies (ECR)](https://docs.aws.amazon.com/AmazonECR/latest/userguide/lp_creation.html)
+
+## DynamoDB
+
+[Cloudformation Docs: DynamoDBTable](https://docs.aws.amazon.com/de_de/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html)
+
+Challenge as of today is: restoring a cf managed table:
+https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/backuprestore_HowItWorks.html
