@@ -23,7 +23,20 @@ Resources:
         ReadCapacityUnits: 1
         WriteCapacityUnits: 1
       #TableName: "myTableName"
-
+      TimeToLiveSpecification:
+          AttributeName: "TTL"
+          Enabled: True
+      Tags:
+        -
+          Key: usecase
+          Value: test
+        -
+          #
+          # Change this to any value after restore to let CF sync the missing
+          # attributes from the template
+          #
+          Key: restored
+          Value: "Wed Oct 10 09:41:17 CEST 2018"
 Outputs:
   TableName:
     Description: Name of Table
